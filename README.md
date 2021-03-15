@@ -20,6 +20,7 @@ The same codes are also uploaded as a Jupyter notebook.
 The best hyperparameters are to be selected based on validation results. Following are the key parameters of interest
 
 number of epochs: 5, 10
+
 number of hidden layers: 3, 4, 5
 size of every hidden layer: 32, 64, 128
 weight decay (L2 regularisation): 0, 0.0005, 0.5
