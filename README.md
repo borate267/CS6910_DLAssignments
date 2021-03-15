@@ -1,7 +1,11 @@
 # DLAssignment1
-This is a programming assignment in which feedforward neural networks of varying architectures have been implemented from scratch with the use of packages like numpy and pandas.
+This is a programming assignment in which feedforward neural networks of varying architectures have been implemented from scratch with the use of packages like numpy and pandas. The following links describe the problem given, the datasets used and how the hyperparameter sweeps were done using WANDB.
 
-## Title
+1) [Problem Statement](https://wandb.ai/miteshk/assignments/reports/Assignment-1--VmlldzozNjk4NDE?accessToken=r7ndsh8lf4wlxyjln7phvvfb8ftvc0n4lyn4tiowdg06hhzpzfzki4jrm28wqh44)
+2) [Datasets](https://github.com/zalandoresearch/fashion-mnist)
+3) [Setting up sweeps](https://wandb.ai/site/articles/introduction-hyperparameter-sweeps)
+
+## Contents
 
 ### Place 1
 
