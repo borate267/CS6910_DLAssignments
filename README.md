@@ -15,6 +15,16 @@ The file contains the implementation of a feed forward NN with back propogation 
 
 The same codes are also uploaded as a Jupyter notebook.
 
+## Optimisers 
+
+The following optimisers have been implemented:
+1) Stochatic gradient Descent
+2) Momentum based gradient descent
+3) Nesterov Accelarated gradient descent
+4) RMSprop
+5) Adam
+6) Nadam 
+
 ## Hyperparameter tuning
 
 The best hyperparameters are to be selected based on validation results. Following are the key parameters of interest. 
