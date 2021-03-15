@@ -15,17 +15,20 @@ The file contains the implementation of a feed forward NN with back propogation 
 
 The same codes are also uploaded as a Jupyter notebook.
 
-### Hyperparameter tuning
+## Hyperparameter tuning
 
-The best hyperparameters are to be selected based on validation results. Following are the key parameters of interest
+The best hyperparameters are to be selected based on validation results. Following are the key parameters of interest. 
 
-number of epochs: 5, 10
+1) number of epochs: 5, 10
+2) number of hidden layers: 3, 4, 5
+3) size of every hidden layer: 32, 64, 128
+4) weight decay (L2 regularisation): 0, 0.0005, 0.5
+5) learning rate: 1e-3, 1 e-4
+6) optimizer: sgd, momentum, nesterov, rmsprop, adam, nadam
+7) batch size: 16, 32, 64
+8) weight initialisation: random, Xavier
+9) activation functions: sigmoid, tanh, ReLU
 
-number of hidden layers: 3, 4, 5
-size of every hidden layer: 32, 64, 128
-weight decay (L2 regularisation): 0, 0.0005, 0.5
-learning rate: 1e-3, 1 e-4
-optimizer: sgd, momentum, nesterov, rmsprop, adam, nadam
-batch size: 16, 32, 64
-weight initialisation: random, Xavier
-activation functions: sigmoid, tanh, ReLU
+Note: There are other parameters that can be tuned but have not been experimented with.
+
+
