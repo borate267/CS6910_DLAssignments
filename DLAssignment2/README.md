@@ -12,7 +12,7 @@ The assignment is implemented using higher level APIs like Keras. The following 
 
 ## Contents
 
-### assignment1.py 
+### final_code_partA.ipynb
 
 The file contains the implementation of a feed forward NN with back propogation supported by various optimisers. The sweep features are also configured. 
 
