@@ -39,6 +39,9 @@ This file contains the code used for testing, visualisation and guided backpropo
 9) Data augmentation ('data_augment') : 'false'
 10) Number of neurons in dense layer ('num_dense') : 128
 
+### guided_backprop_output.pdf
+One image from each of the 10 classes is chosen. Guided backprop is applied to CONV10 and the neuron excitation of 10 neurons in that layer is visualised under each image.
+
 ## Part B
 ### final_code_partB.ipynb
 
@@ -56,8 +59,6 @@ This file contain the puece of code used for testing on the iNaturalist dataset.
 2) Dropout ('dropout') : [0.2]
 3) Batch size for training ('batch_size') : [64]
 4) Number of neurons in dense layer ('num_dense') : [512]
-
-###
 
 All the codes can be run on Jupyter notebook with the essential libraries and packages installed.
 
