@@ -40,7 +40,7 @@ This file contains the code used for testing, visualisation and guided backpropo
 10) Number of neurons in dense layer ('num_dense') : 128
 
 ### guided_backprop_output.pdf
-One image from each of the 10 classes is chosen. Guided backprop is applied to CONV10 and the neuron excitation of 10 neurons in that layer is visualised under each image.
+One image from each of the 10 classes is chosen. Guided backprop is applied to CONV5 and the neuron excitation of 10 neurons in that layer is visualised under each image.
 
 ## Part B
 ### final_code_partB.ipynb
