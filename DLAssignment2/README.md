@@ -12,6 +12,7 @@ The assignment is implemented using higher level APIs like Keras. The following 
 
 ## Contents
 
+## Part A
 ### final_code_partA.ipynb
 ### final_code_partA_testing.ipynb
 
@@ -28,6 +29,7 @@ The above two files contain the implementation of a CNN in Keras (training + tes
 9) Data augmentation ('data_augment') : ['true','false']
 10) Number of neurons in dense layer ('num_dense') : [64, 128, 256, 512]
 
+## Part B
 ### final_code_partB.ipynb
 ### final_code_partBtesting.ipynb
 
