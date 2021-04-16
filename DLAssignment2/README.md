@@ -13,22 +13,27 @@ The assignment is implemented using higher level APIs like Keras. The following 
 ## Contents
 
 ### final_code_partA.ipynb
+### final_code_partA_testing.ipynb
 
-The file contains the implementation of a feed forward NN with back propogation supported by various optimisers. The sweep features are also configured. 
+The above two files contain the implementation of a CNN in Keras (training + testing). The sweep features configured for this are:
 
-### assignment1.ipynb
+1) Shape of the filters ('kernel_size') : [(3,3),(3,3),(3,3),(3,3),(3,3)], [(3,3),(5,5),(5,5),(7,7),(7,7)], [(7,7),(7,7),(5,5),(5,5),(3,3)], [(3,3),(5,5),(7,7),(9,9),(11,11)] 
+2) L2 regularisation ('weight_decay') : [0, 0.0005, 0.005]
+3) Dropout ('dropout') : [0, 0.2, 0.4]
+4) Learning rate ('learning_rate') : [1e-3, 1e-4]
+5) Activation function ('activation') : ['relu', 'elu', 'selu']
+6) Batch size for training ('batch_size') : 64,
+7) Batch Normalisation ('batch_norm') : ['true','false']
+8) Filter organisation ('filt_org' ) : [[32,32,32,32,32],[32,64,64,128,128],[128,128,64,64,32],[32,64,128,256,512]]
+9) Data augmentation ('data_augment') : ['true','false']
+10) Number of neurons in dense layer ('num_dense') : [64, 128, 256, 512]
+
+### final_code_partB.ipynb
+### final_code_partBtesting.ipynb
 
 The same codes are also uploaded as a Jupyter notebook.
 
-## Optimisers 
 
-The following optimisers have been implemented:
-1) Stochatic gradient Descent
-2) Momentum based gradient descent
-3) Nesterov Accelarated gradient descent
-4) RMSprop
-5) Adam
-6) Nadam 
 
 ## Hyperparameter tuning
 
