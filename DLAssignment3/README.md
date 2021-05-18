@@ -8,12 +8,9 @@ This project requires **Python** and the following Python libraries installed:
 
 - [NumPy](http://www.numpy.org/)
 - [matplotlib](http://matplotlib.org/)
-- [Pytorch](https://pytorch.org/)
 - [TensorFlow](https://www.tensorflow.org/install)
-- [OpenCV](https://pypi.org/project/opencv-python/)
 - [wandb](https://wandb.ai/site)
 - [wget](https://pypi.org/project/wget/)
-- [mapextrackt](https://pypi.org/project/mapextrackt/)
 
 ## Code
 - #### Convolution Neural network Class (MyNN)
@@ -121,7 +118,7 @@ jupyter notebook inat_cnn_pretrained.ipynb
 ``` 
 
 ## Data
-The iNaturalist datasetis downloaded directly from the downloadable link using the following the "wget" command:
+The iNaturalist dataset is downloaded directly from the downloadable link using the following the "wget" command:
 ```python
 wget.download('https://storage.googleapis.com/wandb_datasets/nature_12K.zip')
 ```
