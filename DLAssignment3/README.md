@@ -19,7 +19,7 @@ The following line of code is an example to define a model using the MyNN class:
 ```python
 model_rnn = MyRNN(cell_type = 'LSTM', in_emb = 128, hidden_size=128,
                 learning_rate= 0.01, dropout=0.2,pred_type = 'beam_search',epochs = 10,
-                batch_size = 128, beam_width = 10, num_enc = 2,num_dec = 3)
+                batch_size = 128, beam_width = 5, num_enc = 2,num_dec = 3)
 ```
 After defining the model, the training of the model can be done using the following command:
 ```python
