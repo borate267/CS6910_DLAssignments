@@ -108,7 +108,7 @@ The code for visualizing the attention vectors of the Seq2Seq model using Dakshi
 ```bash
 jupyter notebook visualize_attention.ipynb
 ``` 
-The code for visualizing the Visualizing memorization in RNNs of the Seq2Seq model using Dakshina dataset can be run using the following command:
+The code for visualizing memorization in RNNs of the Seq2Seq model using Dakshina dataset can be run using the following command:
 ```bash
 jupyter notebook final_q6.ipynb
 ``` 
