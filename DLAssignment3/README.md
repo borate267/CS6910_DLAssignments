@@ -16,67 +16,67 @@ This project requires **Python** and the following Python libraries installed:
 - #### Recurrent Neural network Class (MyRNN)
 The recurrent neural network based encoder-decoder (seq2seq) is built using tensorflow Keras. The function **build_fit** contains the encoder-decoder pipeline with input embedding (input embedding, encoder layers, decoding layers, back_prop, update_parameters) is used for computing the training and the validation error along with validation accuracy. 
 
-The **train** function consists of data-preprocessing, initializing the model and it's parameters.
-
 The following line of code is an example to define a model using the MyNN class:
 
 ```python
-model = MyNN(drop_out = 0.2, batch_norm = 'Yes', filter_n = 128,  filter_org = 'double_down', hidden_out =196)
+model_rnn = MyRNN(cell_type = 'LSTM', in_emb = 128, hidden_size=128,
+                learning_rate= 0.01, dropout=0.2,pred_type = 'beam_search',epochs = 10,
+                batch_size = 128, beam_width = 10, num_enc = 2,num_dec = 3)
+
 ```
 After defining the model, the training of the model can be done using the following command:
 ```python
-fit(model,train_loader,val_loader,optimizer,epoch,criterion)
+  model_rnn.build_fit(encoder_input_data,decoder_input_data,decoder_target_data,x_test, y_test)
 ```
 - #### Wandb configuration
 Wandb is a tool for tuning the hyper-parameters of a model. The wandb sweep requires to define a sweep configuaration with hyper-parameters in a dictionary type. The following code snippet is an example of defining the wandb sweep configuration:
 ```python
 sweep_config = {
-    'method': 'bayes', #grid, random
+    'method': 'bayes', 
     'metric': {
-      'name': 'accuracy',
+      'name': 'val_accuracy',
       'goal': 'maximize'   
     },
     'parameters': {
-        'drop_out': {
-            'values': [0.2, 0.3]
+
+        'dropout': {
+            'values': [0.0, 0.1, 0.2]
         },
-        'batch_norm': {
-            'values': ['Yes', 'No']
-        },
-        'filter_n': {
-            'values': [64, 128]
-        
+        'learning_rate': {
+            'values': [1e-3, 1e-4]
         },
         'batch_size': {
-            'values': [16, 32]
+            'values': [64, 128]
         },
-        'filter_org': {
-            'values': ['same', 'double_up', 'double_down']
+        'in_emb': {
+            'values': [32, 64, 128]
         },
-        'epoch': {
-            'values': [5,10]
+        'num_enc': {
+            'values': [1, 2, 3]
         },
-        'data_aug': {
-            'values': ['Yes', 'No']
+        'num_dec': {
+            'values': [1, 2, 3]
         },
-        'optimizer': {
-            'values': ['SGD','ADAM'] 
+        'hidden_size':{
+            'values': [32, 64, 128]
         },
-        'lr': {
-            'values': [0.1,0.01] 
+        'cell_type': {
+            'values': ['RNN', 'GRU', 'LSTM']
         },
-        'hidden_out': {
-            'values': [128,196] 
+        'dec_search': {
+            'values': ['beam_search', 'greedy']
         },
+        'beam_width':{
+            'values': [3,5]
+        }
     }
 }
 ```
-
 ```python
-sweep_id = wandb.sweep(sweep_config, entity="paddy3696", project="cnn_inat")
+wandb.agent("auh90ups", entity="cs6910assignment3",project="RNN", function =train_sweep,count=100)
 ```
 - #### Train sweep function
-The function **train** is the main function called by the wandb sweep. This function contains the wandb initialization and data pre-processing.  
+The function **train_sweep** is the main function called by the wandb sweep. This function contains the sweep configurations, and the seq2seq model.  
 
 - #### Testing
 The function **model_test** finds the accuracy of the model with test data.
