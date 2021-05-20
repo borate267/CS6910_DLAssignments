@@ -1,4 +1,4 @@
-# Recurrent Neural Networks (CNN)
+# Recurrent Neural Networks (RNN)
 # Fundamentals of DL course Assignment - 3 
 
 
@@ -13,8 +13,8 @@ This project requires **Python** and the following Python libraries installed:
 - [wget](https://pypi.org/project/wget/)
 
 ## Code
-- #### Convolution Neural network Class (MyNN)
-The convolution neural network is built using Pytorch with conditions on batch normalization. The function **fit** is the contains the neural network pipeline (Forward_prog, compute_loss, back_prop, update_parameters) is used for computing the training and the validation error along with validation accuracy. 
+- #### Recurrent Neural network Class (MyRNN)
+The recurrent neural network based encoder-decoder (seq2seq) is built using tensorflow Keras. The function **build_fit** contains the encoder-decoder pipeline with input embedding (input embedding, encoder layers, decoding layers, back_prop, update_parameters) is used for computing the training and the validation error along with validation accuracy. 
 
 The **train** function consists of data-preprocessing, initializing the model and it's parameters.
 
