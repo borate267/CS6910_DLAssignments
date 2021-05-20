@@ -1,9 +1,7 @@
 # Recurrent Neural Networks (RNN)
 # Fundamentals of DL course Assignment - 3 
 
-
 ## Install
-
 This project requires **Python** and the following Python libraries installed:
 
 - [NumPy](http://www.numpy.org/)
@@ -22,7 +20,6 @@ The following line of code is an example to define a model using the MyNN class:
 model_rnn = MyRNN(cell_type = 'LSTM', in_emb = 128, hidden_size=128,
                 learning_rate= 0.01, dropout=0.2,pred_type = 'beam_search',epochs = 10,
                 batch_size = 128, beam_width = 10, num_enc = 2,num_dec = 3)
-
 ```
 After defining the model, the training of the model can be done using the following command:
 ```python
@@ -81,46 +78,50 @@ The function **train_sweep** is the main function called by the wandb sweep. Thi
 - #### Testing
 The function **model_test** finds the accuracy of the model with test data.
 
-- #### Filter visualization
-The filter visualization is performed using **mapextrackt** library. feature extraction and visualization functions is used from this library. 
+- #### Attention
+The function **model_test** finds the accuracy of the model with test data.
 
-- #### Pre - trained models
-The pre-trained models are trained used from the pytorch library. These models are initialized as a hyper-parameter. The list of pre-trained models is mentioned below:
+- #### Attention visualization
+The 
 
 ```python
 ['resnet', 'alexnet', 'vgg', 'squeezenet', 'densenet', 'inception']
 ```
-- #### Guided Backpropogation
-The Guided backpropogation is performed using Tensorflow Keras because extracting features of each layer was not direct. Another significant reason for using Keras instead of Pytorch is to understand the difference between two libraries. The same CNN model is built completely from the scratch and fifth convolution layer is visualized using the guided propogat
+- #### Attention memory visualization
+The
 
 ## Run
 
 In a terminal or command window, navigate to the top-level project directory `CNN_Pytorch/` (that contains this README) and run one of the following commands:
 
 ```bash
-ipython notebook Inat_cnn_train.ipynb
+ipython notebook transliteration_keras.ipynb
 ```  
 or
 ```bash
-jupyter notebook Inat_cnn_train.ipynb
+jupyter notebook transliteration_keras.ipynb
 ```
 The code for evaluating the perfomance of the custom CNN model with iNaturalist dataset is seperately uploaded and it can be run using the following command:
 ```bash
-jupyter notebook Inat_cnn_test.ipynb
+jupyter notebook Testing_transliteration_keras.ipynb
 ``` 
 The code for guided backpropagation of the custom CNN models with iNaturalist dataset is seperately uploaded and it can be run using the following command:
 ```bash
-jupyter notebook guided_backprop.ipynb
+jupyter notebook transliteration_attention.ipynb
 ``` 
 The code for evaluating the perfomance of the pretrained CNN models with iNaturalist dataset is seperately uploaded and it can be run using the following command:
 ```bash
-jupyter notebook inat_cnn_pretrained.ipynb
+jupyter notebook Testing_attention.ipynb
+``` 
+
+```bash
+jupyter notebook visualize_attention.ipynb
 ``` 
 
 ## Data
-The iNaturalist dataset is downloaded directly from the downloadable link using the following the "wget" command:
+The Daskshina dataset is uploaded in this git repository and imported using the "git clone" command:
 ```python
-wget.download('https://storage.googleapis.com/wandb_datasets/nature_12K.zip')
+!git clone https://github.com/borate267/lexicon-dataset.git
 ```
 
 ### Data Preprocessing
@@ -130,15 +131,13 @@ wget.download('https://storage.googleapis.com/wandb_datasets/nature_12K.zip')
 - The transfromers function are used for resizing, cropping, normalizng the images and then convert it to tensors.
 
 ## Report link
-[assignment2_report](https://wandb.ai/paddy3696/cnn_inat/reports/FDL-Assignment-2---Vmlldzo2MDg3Mzg?accessToken=l08ezysoh00yvd68sdpq7r78rvq5l2zjaxbjg6li81d982eu2we6xqky99wuol3r)
+[assignment_3_report](https://wandb.ai/cs6910assignment3/RNN/reports/FDL-Assignment-3---Vmlldzo2NzE5MTM)
 
 ## Reference
-- Udacity Deep Learning course
-- [Sentdex Pytorch tutorials](https://youtube.com/playlist?list=PLQVvvaa0QuDdeMyHEYc0gxFpYwHY2Qfdh)
-- [Python Engineer Pytorch tutorials](https://youtube.com/playlist?list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4)
-- https://towardsdatascience.com/visualizing-convolution-neural-networks-using-pytorch-3dfa8443e74e
-- [mapextrackt](https://pypi.org/project/mapextrackt/)
-- https://stackoverflow.com/questions/55924331/how-to-apply-guided-backprop-in-tensorflow-2-0
-- https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html
-- [YoloV3](https://pjreddie.com/darknet/yolo/)
-- https://www.pyimagesearch.com/2020/06/01/opencv-social-distancing-detector/
+- https://keras.io/examples/nlp/lstm_seq2seq/#prepare-the-data
+- https://machinelearningmastery.com/define-encoder-decoder-sequence-sequence-model-neural-machine-translation-keras/
+- https://machinelearningmastery.com/develop-encoder-decoder-model-sequence-sequence-prediction-keras/
+- https://machinelearningmastery.com/use-dropout-lstm-networks-time-series-forecasting/
+- https://towardsdatascience.com/visualising-lstm-activations-in-keras-b50206da96ff
+- https://medium.com/datalogue/attention-in-keras-1892773a4f22
+- https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/#:~:text=2.-,Keras%20Embedding%20Layer,API%20also%20provided%20with%20Keras.
