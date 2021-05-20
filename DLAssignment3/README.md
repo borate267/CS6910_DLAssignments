@@ -92,32 +92,29 @@ The
 
 ## Run
 
-In a terminal or command window, navigate to the top-level project directory `CS6910_DLAssignments/DLAssignment3/` (that contains this README) and run one of the following commands:
+In a terminal or command window, navigate to the top-level project directory `CS6910_DLAssignments/DLAssignment3/` (that contains this README) and run the following command for wandb sweep:
 
-```bash
-ipython notebook transliteration_keras.ipynb
-```  
-or
 ```bash
 jupyter notebook transliteration_keras.ipynb
 ```
-The code for evaluating the perfomance of the Seq2Seq model using Dakshina dataset is seperately uploaded and it can be run using the following command:
-```bash
-jupyter notebook Testing_transliteration_keras.ipynb
-``` 
-The code for guided backpropagation of the custom CNN models using iNaturalist dataset is seperately uploaded and it can be run using the following command:
+
 ```bash
 jupyter notebook transliteration_attention.ipynb
 ``` 
-The code for evaluating the perfomance of the Seq2Seq model with attention using Dakshina dataset is seperately uploaded and it can be run using the following command:
+
+The code for evaluating the perfomance of the Seq2Seq model using Dakshina dataset can be run using the following command:
+```bash
+jupyter notebook Testing_transliteration_keras.ipynb
+``` 
+The code for evaluating the perfomance of the Seq2Seq model with attention using Dakshina dataset can be run using the following command:
 ```bash
 jupyter notebook Testing_attention.ipynb
 ``` 
-The code for visualizing the attention vectors of the Seq2Seq model using Dakshina dataset is seperately uploaded and it can be run using the following command:
+The code for visualizing the attention vectors of the Seq2Seq model using Dakshina dataset can be run using the following command:
 ```bash
 jupyter notebook visualize_attention.ipynb
 ``` 
-The code for visualizing the Visualizing memorization in RNNs of the Seq2Seq model using Dakshina dataset is seperately uploaded and it can be run using the following command:
+The code for visualizing the Visualizing memorization in RNNs of the Seq2Seq model using Dakshina dataset can be run using the following command:
 ```bash
 jupyter notebook final_q6.ipynb
 ``` 
@@ -132,7 +129,7 @@ The Daskshina dataset is uploaded in this git repository and imported using the 
 - The transliteration task is carried for Tamil lexicons from Google's Dakshina dataset.
 - The Tamil lexicon contains 68218 training words, 6827 validation words and 6864 testing words.
 - Tokenization of the characters in the dataset are performed using numpy.
-- 
+
 ## Report link
 [assignment_3_report](https://wandb.ai/cs6910assignment3/RNN/reports/FDL-Assignment-3---Vmlldzo2NzE5MTM)
 
