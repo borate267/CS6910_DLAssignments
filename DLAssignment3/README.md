@@ -110,7 +110,7 @@ jupyter notebook visualize_attention.ipynb
 ``` 
 The code for visualizing memorization in RNNs of the Seq2Seq model using Dakshina dataset can be run using the following command:
 ```bash
-jupyter notebook final_q6.ipynb
+jupyter notebook atten_mem_viz.ipynb
 ``` 
 
 ## Data
