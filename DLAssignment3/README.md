@@ -1,4 +1,4 @@
-# Recurrent Neural Networks (RNN)
+# Sequence to Sequence model (transliteration)
 # Fundamentals of DL course Assignment - 3 
 
 ## Install
@@ -92,7 +92,7 @@ The
 
 ## Run
 
-In a terminal or command window, navigate to the top-level project directory `CNN_Pytorch/` (that contains this README) and run one of the following commands:
+In a terminal or command window, navigate to the top-level project directory `CS6910_DLAssignments/DLAssignment3/` (that contains this README) and run one of the following commands:
 
 ```bash
 ipython notebook transliteration_keras.ipynb
@@ -101,21 +101,25 @@ or
 ```bash
 jupyter notebook transliteration_keras.ipynb
 ```
-The code for evaluating the perfomance of the custom CNN model with iNaturalist dataset is seperately uploaded and it can be run using the following command:
+The code for evaluating the perfomance of the Seq2Seq model using Dakshina dataset is seperately uploaded and it can be run using the following command:
 ```bash
 jupyter notebook Testing_transliteration_keras.ipynb
 ``` 
-The code for guided backpropagation of the custom CNN models with iNaturalist dataset is seperately uploaded and it can be run using the following command:
+The code for guided backpropagation of the custom CNN models using iNaturalist dataset is seperately uploaded and it can be run using the following command:
 ```bash
 jupyter notebook transliteration_attention.ipynb
 ``` 
-The code for evaluating the perfomance of the pretrained CNN models with iNaturalist dataset is seperately uploaded and it can be run using the following command:
+The code for evaluating the perfomance of the Seq2Seq model with attention using Dakshina dataset is seperately uploaded and it can be run using the following command:
 ```bash
 jupyter notebook Testing_attention.ipynb
 ``` 
-
+The code for visualizing the attention vectors of the Seq2Seq model using Dakshina dataset is seperately uploaded and it can be run using the following command:
 ```bash
 jupyter notebook visualize_attention.ipynb
+``` 
+The code for visualizing the Visualizing memorization in RNNs of the Seq2Seq model using Dakshina dataset is seperately uploaded and it can be run using the following command:
+```bash
+jupyter notebook final_q6.ipynb
 ``` 
 
 ## Data
@@ -125,11 +129,10 @@ The Daskshina dataset is uploaded in this git repository and imported using the 
 ```
 
 ### Data Preprocessing
-- The iNaturalist dataset contains 9999 training image data and 2000 testing.
-- The training data is very split with ratio of 90:10 for training and validation. This is done to avoid overfitting.
-- All the test, train and validation data are imported using the data loader function in torch library.
-- The transfromers function are used for resizing, cropping, normalizng the images and then convert it to tensors.
-
+- The transliteration task is carried for Tamil lexicons from Google's Dakshina dataset.
+- The Tamil lexicon contains 68218 training words, 6827 validation words and 6864 testing words.
+- Tokenization of the characters in the dataset are performed using numpy.
+- 
 ## Report link
 [assignment_3_report](https://wandb.ai/cs6910assignment3/RNN/reports/FDL-Assignment-3---Vmlldzo2NzE5MTM)
 
