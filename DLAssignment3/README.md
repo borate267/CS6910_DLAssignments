@@ -76,20 +76,14 @@ wandb.agent("auh90ups", entity="cs6910assignment3",project="RNN", function =trai
 The function **train_sweep** is the main function called by the wandb sweep. This function contains the sweep configurations, and the seq2seq model.  
 
 - #### Testing
-The function **model_test** finds the accuracy of the model with test data.
-
-- #### Attention
-The function **model_test** finds the accuracy of the model with test data.
+The function **build_fit** finds the accuracy of the model with test data for both vanilla and attention models.
 
 - #### Attention visualization
-The 
+The function **attention_plot** plots the attention heatmaps for multiple inputs.
 
 ```python
-['resnet', 'alexnet', 'vgg', 'squeezenet', 'densenet', 'inception']
+model_rnn.attention_plot(val_encoder_input_data)
 ```
-- #### Attention memory visualization
-The
-
 ## Run
 
 In a terminal or command window, navigate to the top-level project directory `CS6910_DLAssignments/DLAssignment3/` (that contains this README) and run the following command for wandb sweep:
